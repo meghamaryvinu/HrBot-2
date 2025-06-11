@@ -59,7 +59,7 @@ def vector_embedding():
             try:
                 st.session_state.embeddings = OpenAIEmbeddings(api_key=os.getenv('HR_CHATBOT_OPENAI_KEY'))
                 print('embeddings done')
-                hr_docs_path = '.'
+                hr_docs_path = 'policy_docs'
                 print('loading docs')
                 if not os.path.isdir(hr_docs_path):
                     st.error(f"Error: Document folder '{hr_docs_path}' not found. Please check the path.")
